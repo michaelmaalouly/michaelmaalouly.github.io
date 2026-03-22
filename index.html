@@ -1,574 +1,930 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Michael Maalouly CV</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/aos.css?ver=1.1.0" rel="stylesheet">
-    <link href="css/bootstrap.min.css?ver=1.1.0" rel="stylesheet">
-    <link href="css/main.css?ver=1.1.0" rel="stylesheet">
-    <noscript>
-      <style type="text/css">
-        [data-aos] {
-            opacity: 1 !important;
-            transform: translate(0) scale(1) !important;
-        }
-      </style>
-    </noscript>
-  </head>
-  <body id="top">
-    <header>
-      <div class="profile-page sidebar-collapse">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
-          <div class="container">
-            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">RESUME</a>
-              <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
-            </div>
-            <div class="collapse navbar-collapse justify-content-end" id="navigation">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#publication">Publications</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <div class="page-content">
-      <div>
-<div class="profile-page">
-  <div class="wrapper">
-    <div class="page-header page-header-small" filter-color="blue">
-      <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.jpg')"></div>
-      <div class="container">
-        <div class="content-center">
-          <div class="cc-profile-image"><a href="#"><img src="images/michael.jpg" alt="Image"/></a></div>
-          <div class="h2 title">Michael Maalouly</div>
-          <p class="category text-white">Mechanical Engineer</p><a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Contact me</a><!--<a class="btn btn-primary" href="#" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a> -->
-        </div>
-      </div>
-      <div class="section">
-        <div class="container">
-          <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.linkedin.com/in/michael-maalouly/" rel="tooltip" title="Follow me on LinkedIn"><i class="fa fa-linkedin"></i></a></div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Maalouly — R&D Engineer | PhD Fluid Mechanics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #0f172a;
+      --primary-light: #1e293b;
+      --accent: #6366f1;
+      --accent-light: #818cf8;
+      --accent-warm: #f59e0b;
+      --accent-teal: #14b8a6;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --bg-warm: #fffbeb;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: all 0.2s; }
+    a:hover { color: var(--accent-light); }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 32px; }
+
+    /* Language toggle */
+    [data-lang="fr"] { display: none !important; }
+    body.fr [data-lang="fr"] { display: revert !important; }
+    body.fr [data-lang="en"] { display: none !important; }
+
+    .lang-btn {
+      color: #fff !important;
+      background: rgba(255,255,255,0.1);
+      border: 1.5px solid rgba(255,255,255,0.3) !important;
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.25s;
+    }
+    .lang-btn:hover { background: rgba(255,255,255,0.2) !important; border-color: rgba(255,255,255,0.6) !important; }
+
+    /* Navigation */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(15,23,42,0.92);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: all 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.15); }
+    nav .container { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    nav .brand { font-weight: 800; font-size: 1.05rem; color: #fff; letter-spacing: -0.02em; }
+    nav ul { list-style: none; display: flex; gap: 24px; align-items: center; }
+    nav ul li a {
+      font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.6);
+      text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.2s;
+      padding: 4px 0; position: relative;
+    }
+    nav ul li a:hover { color: #fff; }
+    nav ul li a::after {
+      content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px;
+      background: var(--accent); transition: width 0.3s;
+    }
+    nav ul li a:hover::after { width: 100%; }
+    .nav-toggle { display: none; background: none; border: none; font-size: 1.3rem; color: #fff; cursor: pointer; }
+
+    /* Hero */
+    .hero {
+      position: relative; padding: 180px 0 120px;
+      background: var(--primary);
+      color: #fff; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -50%; right: -20%; width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%);
+      animation: pulse 8s ease-in-out infinite alternate;
+    }
+    .hero .hero-orb {
+      position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.12;
+    }
+    .hero .hero-orb-1 {
+      width: 400px; height: 400px; background: var(--accent);
+      top: -100px; right: -50px; animation: float 12s ease-in-out infinite;
+    }
+    .hero .hero-orb-2 {
+      width: 300px; height: 300px; background: var(--accent-teal);
+      bottom: -50px; left: -80px; animation: float 10s ease-in-out infinite reverse;
+    }
+    .hero .hero-orb-3 {
+      width: 200px; height: 200px; background: var(--accent-warm);
+      top: 30%; left: 40%; animation: float 14s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(30px, -20px); }
+    }
+    @keyframes pulse {
+      0% { opacity: 0.8; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.1); }
+    }
+    .hero::after {
+      content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 100px;
+      background: var(--bg);
+      clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+    }
+    .hero .container { display: flex; align-items: center; gap: 56px; position: relative; z-index: 1; }
+    .hero-photo {
+      width: 180px; height: 180px; border-radius: 24px; object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.1);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      flex-shrink: 0; transition: transform 0.4s;
+    }
+    .hero-photo:hover { transform: translateY(-4px) rotate(1deg); }
+    .hero-text h1 {
+      font-size: 3rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 12px;
+      background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-text .subtitle {
+      font-size: 1.15rem; font-weight: 400; opacity: 0.7; margin-bottom: 28px;
+      letter-spacing: 0.01em;
+    }
+    .hero-links { display: flex; gap: 10px; flex-wrap: wrap; }
+    .hero-links a {
+      display: inline-flex; align-items: center; gap: 7px;
+      color: rgba(255,255,255,0.8); font-size: 0.82rem; font-weight: 500;
+      padding: 8px 18px; border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px; transition: all 0.3s;
+      background: rgba(255,255,255,0.04);
+    }
+    .hero-links a:hover {
+      background: rgba(255,255,255,0.1); color: #fff;
+      border-color: rgba(255,255,255,0.3); transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    section:nth-child(even) { background: var(--bg-alt); }
+    .section-title {
+      font-size: 1.75rem; font-weight: 800; color: var(--primary);
+      margin-bottom: 48px; display: flex; align-items: center; gap: 16px;
+      letter-spacing: -0.02em;
+    }
+    .section-title::before {
+      content: ''; width: 4px; height: 28px; border-radius: 2px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-teal));
+      flex-shrink: 0;
+    }
+
+    /* About */
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .about-text p {
+      margin-bottom: 16px; color: var(--text-light); font-size: 0.95rem; line-height: 1.8;
+    }
+    .info-list { list-style: none; }
+    .info-list li {
+      display: flex; padding: 14px 0; border-bottom: 1px solid var(--border);
+      font-size: 0.9rem; align-items: baseline;
+    }
+    .info-list li:last-child { border-bottom: none; }
+    .info-list .label {
+      font-weight: 700; color: var(--primary); min-width: 110px;
+      text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.08em; padding-top: 2px;
+    }
+
+    /* Skills */
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .skill-category h3 {
+      font-weight: 800; color: var(--primary); margin-bottom: 18px;
+      text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-tag {
+      display: inline-block; padding: 9px 20px; border-radius: 10px;
+      font-size: 0.83rem; font-weight: 600; color: var(--accent);
+      background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.15);
+      transition: all 0.3s; cursor: default;
+    }
+    .skill-tag:hover {
+      background: var(--accent); color: #fff; border-color: var(--accent);
+      transform: translateY(-3px); box-shadow: 0 8px 20px rgba(99,102,241,0.25);
+    }
+
+    /* Timeline */
+    .timeline { position: relative; padding-left: 4px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 7px; top: 12px; bottom: 12px;
+      width: 2px; background: linear-gradient(180deg, var(--accent), var(--accent-teal), var(--border));
+    }
+    .timeline-item {
+      position: relative; padding-left: 44px; margin-bottom: 44px;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 16px; padding: 28px 28px 28px 44px;
+      transition: all 0.3s;
+    }
+    .timeline-item:hover {
+      border-color: rgba(99,102,241,0.2);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+      transform: translateX(4px);
+    }
+    section:nth-child(even) .timeline-item { background: var(--bg); }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item::before {
+      content: ''; position: absolute; left: -23px; top: 30px;
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--accent); border: 3px solid var(--bg);
+      box-shadow: 0 0 0 3px var(--accent);
+      transition: all 0.3s;
+    }
+    .timeline-item:hover::before {
+      box-shadow: 0 0 0 3px var(--accent), 0 0 20px rgba(99,102,241,0.4);
+      transform: scale(1.2);
+    }
+    section:nth-child(even) .timeline-item::before { border-color: var(--bg-alt); }
+    .timeline-item .date {
+      font-size: 0.72rem; font-weight: 700; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;
+      display: inline-block; background: rgba(99,102,241,0.08);
+      padding: 3px 10px; border-radius: 6px;
+    }
+    .timeline-item h3 {
+      font-size: 1.15rem; font-weight: 800; color: var(--primary);
+      margin-bottom: 4px; letter-spacing: -0.01em;
+    }
+    .timeline-item .org {
+      font-size: 0.88rem; font-weight: 500; color: var(--text-light); margin-bottom: 14px;
+    }
+    .timeline-item ul { padding-left: 18px; color: var(--text-light); }
+    .timeline-item ul li {
+      margin-bottom: 6px; font-size: 0.88rem; line-height: 1.65;
+    }
+    .timeline-item ul li::marker { color: var(--accent-light); }
+    .timeline-item .detail { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+    .timeline-item .gpa {
+      display: inline-block; margin-top: 8px; font-size: 0.75rem; font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent-teal));
+      color: #fff; padding: 4px 14px; border-radius: 20px;
+      letter-spacing: 0.02em;
+    }
+
+    /* Publications */
+    .pub-list { list-style: none; }
+    .pub-list li {
+      padding: 24px 28px; margin-bottom: 14px;
+      border: 1px solid var(--border); border-radius: 16px;
+      background: var(--bg); transition: all 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .pub-list li::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+      background: linear-gradient(180deg, var(--accent), var(--accent-teal));
+      border-radius: 4px 0 0 4px; opacity: 0; transition: opacity 0.3s;
+    }
+    .pub-list li:hover::before { opacity: 1; }
+    .pub-list li:hover {
+      border-color: rgba(99,102,241,0.2);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      transform: translateY(-3px);
+    }
+    .pub-list li:last-child { margin-bottom: 0; }
+    .pub-list .pub-title {
+      font-weight: 700; font-size: 0.95rem; color: var(--primary);
+      margin-bottom: 6px; line-height: 1.5; letter-spacing: -0.01em;
+    }
+    .pub-list .pub-title a { color: var(--primary); }
+    .pub-list .pub-title a:hover { color: var(--accent); }
+    .pub-list .pub-authors {
+      font-size: 0.84rem; color: var(--text-light); margin-bottom: 8px; line-height: 1.5;
+    }
+    .pub-list .pub-authors strong { color: var(--text); }
+    .pub-list .pub-journal { font-size: 0.82rem; color: var(--text-light); font-weight: 500; }
+    .pub-list .pub-tag {
+      display: inline-block; font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      padding: 3px 10px; border-radius: 6px; margin-right: 6px;
+    }
+    .pub-tag.first-author {
+      background: rgba(99,102,241,0.1); color: var(--accent);
+    }
+    .pub-tag.preprint {
+      background: rgba(245,158,11,0.1); color: var(--accent-warm);
+    }
+
+    /* Teaching */
+    .teaching-header { margin-bottom: 32px; }
+    .teaching-badge {
+      display: inline-flex; align-items: center; gap: 16px;
+      background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.12);
+      border-radius: 14px; padding: 16px 24px;
+    }
+    .teaching-badge > i {
+      font-size: 1.6rem; color: var(--accent);
+    }
+    .teaching-hours {
+      display: block; font-size: 1.1rem; font-weight: 800; color: var(--primary);
+      letter-spacing: -0.01em;
+    }
+    .teaching-place {
+      display: block; font-size: 0.82rem; font-weight: 500; color: var(--text-light);
+      margin-top: 2px;
+    }
+    .teaching-cards {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    }
+    .teaching-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 16px; padding: 28px 24px; text-align: center;
+      transition: all 0.3s; position: relative; overflow: hidden;
+    }
+    .teaching-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-teal));
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .teaching-card:hover::before { opacity: 1; }
+    .teaching-card:hover {
+      border-color: rgba(99,102,241,0.2);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.06);
+      transform: translateY(-4px);
+    }
+    .teaching-card-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: rgba(99,102,241,0.08); color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; margin: 0 auto 16px;
+      transition: all 0.3s;
+    }
+    .teaching-card:hover .teaching-card-icon {
+      background: var(--accent); color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(99,102,241,0.3);
+    }
+    .teaching-card-body h4 {
+      font-size: 1rem; font-weight: 700; color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .teaching-card-body p {
+      font-size: 0.85rem; color: var(--text-light); margin-bottom: 10px;
+    }
+    .teaching-level {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--accent-teal); background: rgba(20,184,166,0.08);
+      padding: 4px 12px; border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+      .teaching-cards { grid-template-columns: 1fr; }
+    }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .contact-info-list { list-style: none; }
+    .contact-info-list li {
+      display: flex; align-items: center; gap: 16px;
+      padding: 16px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem;
+    }
+    .contact-info-list li:last-child { border-bottom: none; }
+    .contact-info-list li i {
+      width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+      background: rgba(99,102,241,0.08); border-radius: 12px;
+      color: var(--accent); font-size: 1rem; flex-shrink: 0;
+      transition: all 0.3s;
+    }
+    .contact-info-list li:hover i {
+      background: var(--accent); color: #fff;
+      transform: translateY(-2px); box-shadow: 0 4px 12px rgba(99,102,241,0.25);
+    }
+    .contact-form .form-group { margin-bottom: 16px; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 12px 16px; border: 2px solid var(--border); border-radius: 12px;
+      font-family: inherit; font-size: 0.88rem; color: var(--text); background: var(--bg);
+      transition: all 0.2s; outline: none;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(99,102,241,0.08);
+    }
+    .contact-form textarea { min-height: 110px; resize: vertical; }
+    .contact-form button {
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      color: #fff; border: none; padding: 12px 36px;
+      border-radius: 12px; font-family: inherit; font-weight: 700; font-size: 0.88rem;
+      cursor: pointer; transition: all 0.3s; letter-spacing: 0.02em;
+    }
+    .contact-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(99,102,241,0.3);
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0; text-align: center;
+      background: var(--primary);
+      color: rgba(255,255,255,0.4); font-size: 0.8rem;
+    }
+    footer .social-links { margin-bottom: 14px; }
+    footer .social-links a {
+      color: rgba(255,255,255,0.35); margin: 0 14px; font-size: 1.3rem;
+      transition: all 0.3s; display: inline-block;
+    }
+    footer .social-links a:hover {
+      color: var(--accent-light); transform: translateY(-3px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero .container { flex-direction: column; text-align: center; }
+      .hero-text h1 { font-size: 2rem; }
+      .hero-links { justify-content: center; }
+      .hero { padding: 140px 0 100px; }
+      .info-grid, .skills-grid, .contact-grid { grid-template-columns: 1fr; }
+      .timeline-item { margin-left: 20px; }
+      section { padding: 56px 0; }
+      nav ul { display: none; }
+      nav ul.open {
+        display: flex; flex-direction: column; position: absolute;
+        top: 60px; left: 0; right: 0; background: var(--primary);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        padding: 20px 24px; gap: 14px;
+      }
+      .nav-toggle { display: block; }
+    }
+
+    /* Animations */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container">
+      <a class="brand" href="#">Michael Maalouly</a>
+      <button class="nav-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul>
+        <li data-lang="en"><a href="#about">About</a></li>
+        <li data-lang="fr"><a href="#about">&Agrave; propos</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li data-lang="en"><a href="#education">Education</a></li>
+        <li data-lang="fr"><a href="#education">Formation</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li data-lang="en"><a href="#skills">Skills</a></li>
+        <li data-lang="fr"><a href="#skills">Comp&eacute;tences</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="lang-btn" id="lang-toggle" href="javascript:void(0)">FR</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="container">
+      <img src="images/michael.jpg" alt="Michael Maalouly" class="hero-photo">
+      <div class="hero-text">
+        <h1>Michael Maalouly</h1>
+        <p class="subtitle" data-lang="en">R&D Engineer &mdash; PhD in Fluid Mechanics</p>
+        <p class="subtitle" data-lang="fr">Ing&eacute;nieur R&D &mdash; Docteur en M&eacute;canique des Fluides</p>
+        <div class="hero-links">
+          <a href="mailto:michael.maalouly@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+          <a href="https://www.linkedin.com/in/michael-maalouly/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://orcid.org/0000-0002-5953-909X" target="_blank"><i class="fa-brands fa-orcid"></i> ORCID</a>
+          <a href="https://github.com/michaelmaalouly" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="section" id="about">
-  <div class="container">
-    <div class="card" data-aos="fade-up" data-aos-offset="10">
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <div class="card-body">
-            <div class="h4 mt-0 title">About</div>
-            <p>Hello! I am Michael Maalouly. A mechanical engineer specialized in computational fluid dynamics.</p>
-            <p>You might be asking <i>"why does he have The Starry Night as a background?"</i> Well those blue and yellow swirling brush strokes were proven to depict turbulence, one of the hardest phenomena to predict. It amazes me how Van Gogh came to replicate this phenomenon without knowing that he was doing so.</p>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title" data-lang="en">About</h2>
+      <h2 class="section-title" data-lang="fr">&Agrave; propos</h2>
+      <div class="info-grid fade-in">
+        <div class="about-text">
+          <div data-lang="en">
+            <p>R&D engineer at OVHcloud specializing in thermal management and cooling technologies for data centers. PhD in Fluid Mechanics from Universit&eacute; de Lille with expertise in computational fluid dynamics, turbulence modelling, and high-performance computing.</p>
+            <p>My research spans ocean turbulence, Lagrangian particle dynamics, two-phase flows, and industrial cooling systems. I combine numerical simulation with experimental validation to solve complex engineering problems.</p>
+          </div>
+          <div data-lang="fr">
+            <p>Ing&eacute;nieur R&D chez OVHcloud, sp&eacute;cialis&eacute; dans la gestion thermique et les technologies de refroidissement pour centres de donn&eacute;es. Docteur en M&eacute;canique des Fluides de l'Universit&eacute; de Lille, avec une expertise en simulation num&eacute;rique (CFD), mod&eacute;lisation de la turbulence et calcul haute performance.</p>
+            <p>Mes recherches couvrent la turbulence oc&eacute;anique, la dynamique lagrangienne, les &eacute;coulements diphasiques et les syst&egrave;mes de refroidissement industriels. Je combine simulation num&eacute;rique et validation exp&eacute;rimentale pour r&eacute;soudre des probl&egrave;mes d'ing&eacute;nierie complexes.</p>
           </div>
         </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="card-body">
-            <div class="h4 mt-0 title">Basic Information</div>
-            <div class="row">
-              <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-              <div class="col-sm-8">28</div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-              <div class="col-sm-8">michael.maalouly@gmail.com</div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
-              <div class="col-sm-8">+33-7-72-343993</div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
-              <div class="col-sm-8">Lille, France</div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-              <div class="col-sm-8">Arabic, English, French</div>
-            </div>
-          </div>
-        </div>
+        <ul class="info-list" data-lang="en">
+          <li><span class="label">Location</span> <span>Lille, France</span></li>
+          <li><span class="label">Email</span> <span>michael.maalouly@gmail.com</span></li>
+          <li><span class="label">Phone</span> <span>+33 7 72 34 39 93</span></li>
+          <li><span class="label">Languages</span> <span>French, English, Arabic</span></li>
+        </ul>
+        <ul class="info-list" data-lang="fr">
+          <li><span class="label">Lieu</span> <span>Lille, France</span></li>
+          <li><span class="label">Email</span> <span>michael.maalouly@gmail.com</span></li>
+          <li><span class="label">T&eacute;l.</span> <span>+33 7 72 34 39 93</span></li>
+          <li><span class="label">Langues</span> <span>Fran&ccedil;ais, Anglais, Arabe</span></li>
+        </ul>
       </div>
     </div>
-  </div>
-</div>
-<div class="section" id="skill">
-  <div class="container">
-    <div class="h4 text-center mb-4 title">Professional Skills</div>
-    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Troubleshooting and Problem Solving</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Written and Verbal Communication</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-              </div>
-            </div>
-          </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title" data-lang="en">Experience</h2>
+      <h2 class="section-title" data-lang="fr">Exp&eacute;rience professionnelle</h2>
+
+      <!-- EN -->
+      <div class="timeline fade-in" data-lang="en">
+        <div class="timeline-item">
+          <div class="date">Jan 2025 &mdash; Present</div>
+          <h3>R&D Cooling Engineer</h3>
+          <div class="org">OVHcloud &middot; Croix, France</div>
+          <ul>
+            <li>Managing thermal laboratories and all thermal experiments, from protocol design to deployment</li>
+            <li>Validating cooling equipment and systems through numerical simulation, ensuring compliance with industrial standards</li>
+            <li>Contributing to 88% reduction in pumping power and 36% reduction in rack cooling energy (patented system)</li>
+            <li>Optimizing thermal dissipation strategies in server racks, reducing data center energy consumption</li>
+            <li>Supervising PhD students and interns on innovative cooling system development</li>
+            <li>Publishing scientific articles and filing patents on advanced cooling technologies</li>
+          </ul>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Academic Writing</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Bash Scripting</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
-              </div>
-            </div>
-          </div>
+        <div class="timeline-item">
+          <div class="date">Oct 2021 &mdash; Dec 2024</div>
+          <h3>PhD Researcher</h3>
+          <div class="org">Universit&eacute; de Lille, Unit&eacute; de M&eacute;canique de Lille &middot; Lille, France</div>
+          <ul>
+            <li>Developed pseudo-spectral simulation codes in Fortran for ocean flow modelling on HPC infrastructure</li>
+            <li>Created Python data analysis pipelines (NumPy, SciPy, Xarray) for processing massive general circulation model datasets</li>
+            <li>Published 3 first-author papers in international journals (Physical Review Fluids, Physics of Fluids)</li>
+            <li>Delivered 7 presentations at international conferences (EGU, ETC, SWOT Science Team)</li>
+            <li>Teaching (~80h): Thermodynamics, Numerical Methods, Turbulence (L2 to M2)</li>
+          </ul>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Multiprocessing with SLURM and HTCondor</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div><span class="progress-value">70%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Object Oriented Programming</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">60%</span>
-              </div>
-            </div>
-          </div>
+        <div class="timeline-item">
+          <div class="date">Sept 2019 &mdash; Sept 2021</div>
+          <h3>Cooling &amp; Simulation Engineer</h3>
+          <div class="org">CERN, CMS Experiment &middot; Meyrin, Switzerland</div>
+          <ul>
+            <li>Simulated CO&#8322; two-phase boiling flows with OpenFOAM to optimize CMS detector cooling</li>
+            <li>Designed and validated cooling manifolds for high magnetic field environments (LS3 upgrade)</li>
+            <li>Modelled and optimized ventilation systems for CO&#8322; pump rooms using ANSYS Fluent</li>
+            <li>Developed a negative pressure chamber design as part of the CMS vs COVID-19 task force</li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section" id="skill">
-  <div class="container">
-    <div class="h4 text-center mb-4 title">Softwares</div>
-    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Python</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">CATIA</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">SOLIDWORKS</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">ANSYS - Fluent</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div><span class="progress-value">90%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">MATLAB</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">OpenFOAM</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">C++</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">60%</span>
-              </div>
-            </div>
-          </div>
+        <div class="timeline-item">
+          <div class="date">Jan 2019 &mdash; Dec 2020</div>
+          <h3>Research Assistant</h3>
+          <div class="org">Lebanese American University &middot; Byblos, Lebanon</div>
+          <ul>
+            <li>Performed transient CFD analysis of H-type Vertical Axis Wind Turbines using ANSYS Fluent</li>
+            <li>Simulated two-phase boiling flows using OpenFOAM</li>
+            <li>Published in Energy Reports; supervised undergraduate research students</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<div class="section" id="publication">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 ml-auto mr-auto">
-        <div class="h4 text-center mb-4 title">Publications</div>
-        <div class="nav-align-center">
-          <ul class="nav nav-pills nav-pills-primary" role="tablist">
-            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#papers" role="tablist"><i class="fa fa-book" aria-hidden="true"></i></a></li>
+
+      <!-- FR -->
+      <div class="timeline fade-in" data-lang="fr">
+        <div class="timeline-item">
+          <div class="date">Jan 2025 &mdash; Pr&eacute;sent</div>
+          <h3>Ing&eacute;nieur R&D Refroidissement</h3>
+          <div class="org">OVHcloud &middot; Croix, France</div>
+          <ul>
+            <li>Responsable des laboratoires thermiques et de l'ensemble des exp&eacute;rimentations, de la conception des protocoles aux d&eacute;ploiements</li>
+            <li>Validation des &eacute;quipements et syst&egrave;mes de refroidissement par simulation num&eacute;rique, assurant la conformit&eacute; aux normes industrielles</li>
+            <li>Contribution &agrave; la r&eacute;duction de 88% de la puissance de pompage et 36% de l'&eacute;nergie de refroidissement des racks (syst&egrave;me brevet&eacute;)</li>
+            <li>Optimisation des strat&eacute;gies de dissipation thermique dans les baies et serveurs, r&eacute;duisant la consommation &eacute;nerg&eacute;tique</li>
+            <li>Encadrement de chercheurs (doctorants et stagiaires) sur le d&eacute;veloppement d'un syst&egrave;me de refroidissement innovant</li>
+            <li>Publication d'articles scientifiques et d&eacute;p&ocirc;t de brevets relatifs aux technologies de refroidissement avanc&eacute;es</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="date">Oct 2021 &mdash; D&eacute;c 2024</div>
+          <h3>Doctorant Chercheur</h3>
+          <div class="org">Universit&eacute; de Lille, Unit&eacute; de M&eacute;canique de Lille &middot; Lille, France</div>
+          <ul>
+            <li>D&eacute;veloppement de codes de simulation pseudo-spectraux en Fortran pour la mod&eacute;lisation d'&eacute;coulements oc&eacute;aniques sur infrastructure HPC</li>
+            <li>Cr&eacute;ation de pipelines d'analyse de donn&eacute;es en Python (NumPy, SciPy, Xarray) pour le traitement de donn&eacute;es massives</li>
+            <li>Publication de 3 articles en premier auteur dans des revues internationales (Physical Review Fluids, Physics of Fluids)</li>
+            <li>7 pr&eacute;sentations en conf&eacute;rences internationales (EGU, ETC, SWOT Science Team)</li>
+            <li>Enseignement (~80h) : Thermodynamique, M&eacute;thodes num&eacute;riques, Turbulence (L2 &agrave; M2)</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="date">Sept 2019 &mdash; Sept 2021</div>
+          <h3>Ing&eacute;nieur Syst&egrave;me de Refroidissement</h3>
+          <div class="org">CERN, Exp&eacute;rience CMS &middot; Meyrin, Suisse</div>
+          <ul>
+            <li>Simulation CFD d'&eacute;coulements diphasiques bouillonnants de CO&#8322; avec OpenFOAM pour optimiser le refroidissement du d&eacute;tecteur CMS</li>
+            <li>Conception et validation de collecteurs de refroidissement pour environnements &agrave; champ magn&eacute;tique &eacute;lev&eacute; (upgrade LS3)</li>
+            <li>Mod&eacute;lisation et optimisation des syst&egrave;mes de ventilation des salles de pompes CO&#8322; sous ANSYS Fluent</li>
+            <li>D&eacute;veloppement d'une chambre &agrave; pression n&eacute;gative dans le cadre de la task force CMS vs COVID-19</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="date">Jan 2019 &mdash; D&eacute;c 2020</div>
+          <h3>Assistant de Recherche</h3>
+          <div class="org">Lebanese American University &middot; Byblos, Liban</div>
+          <ul>
+            <li>Analyse transitoire d'&eacute;oliennes &agrave; axe vertical (VAWT) par simulation CFD sous ANSYS Fluent</li>
+            <li>Simulation d'&eacute;coulements diphasiques bouillonnants sous OpenFOAM</li>
+            <li>Publication dans Energy Reports ; encadrement d'&eacute;tudiants en recherche</li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="tab-content gallery mt-5">
-      <div class="tab-pane active" id="papers">
-          <div class="ml-auto mr-auto">
-              <div class="row">
-                  <div class="col-md-6">
-                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                          <a href="https://doi.org/10.1063/5.0174665">
-                              <figure class="cc-effect">
-                                  <img src="images/sqgp1.jpg" alt="Image"/>
-                                  <figcaption style="text-align: center;">
-                                      <div class="h4">Particle dispersion and clustering in surface ocean turbulence with ageostrophic dynamics</div>
-                                      <p><em>First Author</em></p>
-                                  </figcaption>
-                              </figure>
-                          </a>
-                      </div>
-                  </div>
-                  <div class="col-md-6">
-                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                          <a href="https://doi.org/10.1016/j.egyr.2022.03.136">
-                              <figure class="cc-effect">
-                                  <img src="images/vawt_article.png" alt="Image" style="max-width: 100%; height: auto;">
-                                  <!-- Applying max-width: 100%; will ensure that the image doesn't exceed its container width -->
-                                  <!-- Height: auto; ensures that the image's aspect ratio is maintained -->
-                                  <figcaption style="text-align: center;">
-                                      <div class="h4">Transient Analysis of H-type Vertical Axis Wind Turbines Using CFD</div>
-                                      <p><em>First Author</em></p>
-                                  </figcaption>
-                              </figure>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-<div class="section" id="experience">
-  <div class="container cc-experience">
-    <div class="h4 text-center mb-4 title">Work Experience</div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-experience-header">
-            <p>Oct 2021 - Nov 2024</p>
-            <div class="h5">Université de Lille, Unité Mécanique de Lille</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">PhD Candidate</div>
-            <p><strong>Responsibilities</strong></p>
-            <ul>
-              <li>Modelling surface ocean turbulence with ageostrophic dynamics</li>
-                <ul>
-                  <li>Using a next order in Rossby number model to simulate ocean turbulence</li>
-                  <li>Implementing a Lagrangian particle dispersion model to track objects in the ocean</li>
-                </ul>
-              <li>Characterizing the flow properties</li>
-              <li>Characterizing the properties of the dispersion process in the studied flows through various indicators</li>
-              <li>Analysing LLC4320 (a general circulation model) data using Xarray</li>
-              <li>Comparing results of idealized models to more realistic numerical simulations</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-experience-header">
-            <p>Sept 2019 - Sept 2021</p>
-            <div class="h5">CERN, CMS</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">Cooling and Simulation Engineer</div>
-            <p><strong>Responsibilities</strong></p>
-            <ul>
-              <li>Conducting research in computational fluid dynamics specifically boiling flows, which includes</li>
-                <ul>
-                  <li>Creating an OpenFOAM model that is able to simulate boiling flows</li>
-                  <li>Validating results with experimental data</li>
-                </ul>
-              <li>Designing P&ID and 3D models for the CMS CO2 cooling manifolds for the LS3 upgrade</li>
-              <li>Simulating and optimizing the ventilation system of the CO2 pump rooms in the CMS USC cavern using ANSYS Fluent</li>
-              <li>Working as part of CMS versus COVID-19 task force on designing a negative pressure chamber for patients</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-experience-header">
-            <p>Jan 2019 - Dec 2020</p>
-            <div class="h5">Lebanese American University</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">Research Assistant</div>
-            <p><strong>Responsibilities</strong></p>
-            <ul>
-              <li>Analyzing the transient of the behavior of Vertical Axis Wind Turbines</li>
-              <li>Modelling and simulating VAWTs using Fluent</li>
-              <li>Disseminating the results in the literature</li>
-              <li>Currently working on simulating two-phase flow boiling</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section" id="education">
-  <div class="container cc-education">
-    <div class="h4 text-center mb-4 title">Education</div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-education-header">
-            <p>2021 - 2024</p>
-            <div class="h5">PhD</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">PhD in Fluid Dynamics</div>
-            <p class="category">Université de Lille</p>
-            <ul>
-              <li>Emphasis on turbulence and particle dispersion modelling</li>
-              <li>Thesis title: Lagrangian particle dynamics in ocean submesoscale turbulence and future satellite data</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-education-header">
-            <p>2019 - 2020</p>
-            <div class="h5">Master's Degree</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">M.Sc. in Mechanical Engineering</div>
-            <p class="category">Lebanese American University</p>
-            <ul>
-              <li>Emphasis on Computational Fluid Dynamics and Thermal Systems</li>
-              <li>Thesis title: <i><a href="https://github.com/michaelmaalouly/michaelmaalouly.github.io/blob/main/documents/MScThesisManuscritpt.pdf" class="text-info stretched-link">Numerical Simulation of Two-phase Boiling Flow in Macro and Micro-scale Channels</a></i></li>
-              <li>CGPA 3.96</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-education-header">
-            <p>2014 - 2018</p>
-            <div class="h5">Bachelor's Degree</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">B.E. in Mechanical Engineering</div>
-            <p class="category">Lebanese American University</p>
-            <ul>
-              <li>Graduated with distinction</li>
-              <li><a href="https://news.lau.edu.lb/2018/students-and-faculty-win-big-at-the-lira-14-expo.php" class="text-info stretched-link">Won the second place award in the national LIRA 14 competition for my final project: <i>Passive system to support the locomotion of paralyzed persons of snow</i></a></li>
-              <li>CGPA 3.44</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-education-header">
-            <p>2011 - 2014</p>
-            <div class="h5">High School</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">Lebanese Baccalaureate Certificate of Secondary Education</div>
-            <p class="category">Collège des Sœurs des Saints Cœurs</p>
-            <p>General Sciences</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section" id="reference">
-  <div class="container cc-reference">
-    <div class="h4 mb-4 text-center title">References</div>
-    <div class="card" data-aos="zoom-in">
-      <div class="carousel slide" id="cc-Indicators" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li class="active" data-target="#cc-Indicators" data-slide-to="0"></li>
-          <li data-target="#cc-Indicators" data-slide-to="1"></li>
-          <li data-target="#cc-Indicators" data-slide-to="2"></li>
-          <!-- <li data-target="#cc-Indicators" data-slide-to="3"></li> -->
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-lg-2 col-md-3 cc-reference-header"><img src="images/reference-image-1.jpg" alt="Image"/>
-                <div class="h5 pt-2">Mauro Carnevale</div>
-                <p class="category">Lecturer / UoB</p>
-              </div>
-              <div class="col-lg-10 col-md-9">
-                <p> Mr Michael Maalouly has a kind and friendly nature and he has demonstrated being able to work in a team and supervise/support younger students at the beginning of their research work. He is used to an international environment being enrolled as a Master’s student at CERN.</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-lg-2 col-md-3 cc-reference-header"><img src="images/reference-image-2.jpg" alt="Image"/>
-                <div class="h5 pt-2">Amina El Cheikh</div>
-                <p class="category">Assistant Professor / LAU</p>
-              </div>
-              <div class="col-lg-10 col-md-9">
-                <p> I have known Mr Maalouly for around 3 years. His success in the research projects and course exams demonstrate his ability to do research in the thermal energy and fluid flow field in general and particularly in the renewable energy field. His performance was excellent. Michael also showed exceptional leadership and communication skills and an ability to coherently work in a team throughout his years at LAU.</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-lg-2 col-md-3 cc-reference-header"><img src="images/reference-image-3.jpg" alt="Image"/>
-                <div class="h5 pt-2">Wissam Habchi</div>
-                <p class="category">IME Chair / LAU</p>
-              </div>
-              <div class="col-lg-10 col-md-9">
-                <p> I must say that Michael’s performance at LAU continued to improve over the years, revealing his increased maturity, commitment and dedication to his studies. On a personal level, Michael is a calm and well posed individual who’s perfectly capable of communicating his ideas in written and spoken English.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section" id="contact">
-  <div class="cc-contact-information" style="background-image: url('images/staticmap.png')">
+  </section>
+
+  <!-- Education -->
+  <section id="education">
     <div class="container">
-      <div class="cc-contact">
-        <div class="row">
-          <div class="col-md-9">
-            <div class="card mb-0" data-aos="zoom-in">
-              <div class="h4 text-center title">Contact Me</div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="card-body">
-                    <form action="https://formspree.io/michael.maalouly@gmail.com" method="POST">
-                      <div class="p pb-3"><strong>Feel free to contact me </strong></div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
-                            <input class="form-control" type="text" name="name" placeholder="Name" required="required"/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-file-text"></i></span>
-                            <input class="form-control" type="text" name="Subject" placeholder="Subject" required="required"/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input class="form-control" type="email" name="_replyto" placeholder="E-mail" required="required"/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="Your Message" required="required"></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <button class="btn btn-primary" type="submit">Send</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card-body">
-                    <p class="mb-0"><strong>Address </strong></p>
-                    <p class="pb-2">Lille, France</p>
-                    <p class="mb-0"><strong>Phone</strong></p>
-                    <p class="pb-2">+33-7-72-343993</p>
-                    <p class="mb-0"><strong>Email</strong></p>
-                    <p>michael.maalouly@gmail.com</p>
-                  </div>
-                </div>
-              </div>
+      <h2 class="section-title" data-lang="en">Education</h2>
+      <h2 class="section-title" data-lang="fr">Formation</h2>
+
+      <!-- EN -->
+      <div class="timeline fade-in" data-lang="en">
+        <div class="timeline-item">
+          <div class="date">2021 &mdash; 2024</div>
+          <h3>PhD in Fluid Mechanics</h3>
+          <div class="org">Universit&eacute; de Lille &middot; Lille, France</div>
+          <p class="detail">Thesis: <a href="https://theses.fr/2024ULILN049"><em>Lagrangian particle dynamics in ocean submesoscale turbulence</em></a></p>
+        </div>
+        <div class="timeline-item">
+          <div class="date">2019 &mdash; 2021</div>
+          <h3>M.Sc. Mechanical Engineering</h3>
+          <div class="org">Lebanese American University &middot; Byblos, Lebanon</div>
+          <p class="detail">Thesis: <a href="https://laur.lau.edu.lb:8443/xmlui/handle/10725/13439?show=full"><em>Numerical Simulation of Two-phase Boiling Flow in Macro and Micro-scale Channels</em></a></p>
+          <span class="gpa">CGPA 3.96 / 4.0</span>
+        </div>
+        <div class="timeline-item">
+          <div class="date">2014 &mdash; 2019</div>
+          <h3>B.E. Mechanical Engineering</h3>
+          <div class="org">Lebanese American University &middot; Byblos, Lebanon</div>
+          <p class="detail">Graduated with distinction. <a href="https://news.lau.edu.lb/2018/students-and-faculty-win-big-at-the-lira-14-expo.php">2nd place at LIRA 14 national competition</a> for final project: <em>Passive system to support the locomotion of paralyzed persons on snow</em>.</p>
+          <span class="gpa">CGPA 3.44 / 4.0</span>
+        </div>
+      </div>
+
+      <!-- FR -->
+      <div class="timeline fade-in" data-lang="fr">
+        <div class="timeline-item">
+          <div class="date">2021 &mdash; 2024</div>
+          <h3>Doctorat en M&eacute;canique des Milieux Fluides</h3>
+          <div class="org">Universit&eacute; de Lille &middot; Lille, France</div>
+          <p class="detail">Th&egrave;se : <a href="https://theses.fr/2024ULILN049"><em>Dynamique lagrangienne dans la turbulence oc&eacute;anique &agrave; sous-m&eacute;so&eacute;chelle</em></a></p>
+        </div>
+        <div class="timeline-item">
+          <div class="date">2019 &mdash; 2021</div>
+          <h3>Master 2 en G&eacute;nie M&eacute;canique</h3>
+          <div class="org">Lebanese American University &middot; Byblos, Liban</div>
+          <p class="detail">M&eacute;moire : <a href="https://laur.lau.edu.lb:8443/xmlui/handle/10725/13439?show=full"><em>Simulation num&eacute;rique des &eacute;coulements diphasiques en &eacute;bullition dans des canaux &agrave; l'&eacute;chelle macro et microscopique</em></a></p>
+          <span class="gpa">CGPA 3.96 / 4.0</span>
+        </div>
+        <div class="timeline-item">
+          <div class="date">2014 &mdash; 2019</div>
+          <h3>Dipl&ocirc;me d'Ing&eacute;nieur en G&eacute;nie M&eacute;canique</h3>
+          <div class="org">Lebanese American University &middot; Byblos, Liban</div>
+          <p class="detail">Dipl&ocirc;m&eacute; avec distinction. <a href="https://news.lau.edu.lb/2018/students-and-faculty-win-big-at-the-lira-14-expo.php">2&egrave;me place &agrave; la comp&eacute;tition nationale LIRA 14</a> pour le projet : <em>Syst&egrave;me passif pour la locomotion de personnes paralys&eacute;es sur la neige</em>.</p>
+          <span class="gpa">CGPA 3.44 / 4.0</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+      <ul class="pub-list fade-in">
+        <li>
+          <div class="pub-title"><a href="https://doi.org/10.48550/arXiv.2506.01002">Effects of high-frequency and balanced motions on Lagrangian pair dispersion at the ocean surface</a></div>
+          <div class="pub-authors"><strong>M. Maalouly</strong>, A. Dekens, G. Lapeyre, A.L.S. Ponte, S. Berti</div>
+          <div class="pub-journal">
+            <span class="pub-tag first-author" data-lang="en">First Author</span>
+            <span class="pub-tag first-author" data-lang="fr">Premier auteur</span>
+            <span class="pub-tag preprint" data-lang="en">Preprint</span>
+            <span class="pub-tag preprint" data-lang="fr">Pr&eacute;publication</span>
+            <span data-lang="en">In review, <em>Journal of Physical Oceanography</em> (2025)</span>
+            <span data-lang="fr">En r&eacute;vision, <em>Journal of Physical Oceanography</em> (2025)</span>
+          </div>
+        </li>
+        <li>
+          <div class="pub-title"><a href="https://doi.org/10.1016/j.applthermaleng.2025.128116">Passive hydraulic cooling: a CDU-free solution for data center efficiency</a></div>
+          <div class="pub-authors">H. Charaf, <strong>M. Maalouly</strong>, A. Chehade, H. Al Moussawi, T. Moussa, G. Polidori, C. Maalouf</div>
+          <div class="pub-journal"><em>Applied Thermal Engineering</em>, 128116 (2025)</div>
+        </li>
+        <li>
+          <div class="pub-title"><a href="https://doi.org/10.1103/PhysRevFluids.9.104503">Impact of ageostrophic dynamics on the predictability of Lagrangian trajectories in surface-ocean turbulence</a></div>
+          <div class="pub-authors"><strong>M. Maalouly</strong>, G. Lapeyre, S. Berti</div>
+          <div class="pub-journal">
+            <span class="pub-tag first-author" data-lang="en">First Author</span>
+            <span class="pub-tag first-author" data-lang="fr">Premier auteur</span>
+            <em>Physical Review Fluids</em>, <strong>9</strong>, 104503 (2024)
+          </div>
+        </li>
+        <li>
+          <div class="pub-title"><a href="https://doi.org/10.1063/5.0174665">Particle dispersion and clustering in surface ocean turbulence with ageostrophic dynamics</a></div>
+          <div class="pub-authors"><strong>M. Maalouly</strong>, G. Lapeyre, B. Cozian, G. Mompean, S. Berti</div>
+          <div class="pub-journal">
+            <span class="pub-tag first-author" data-lang="en">First Author</span>
+            <span class="pub-tag first-author" data-lang="fr">Premier auteur</span>
+            <em>Physics of Fluids</em>, <strong>35</strong>, 126601 (2023)
+          </div>
+        </li>
+        <li>
+          <div class="pub-title"><a href="https://doi.org/10.1016/j.egyr.2022.03.136">Transient analysis of H-type Vertical Axis Wind Turbines using CFD</a></div>
+          <div class="pub-authors"><strong>M. Maalouly</strong>, M. Souaiby, A. El-Cheikh, J.S. Issa, M. Elkhoury</div>
+          <div class="pub-journal">
+            <span class="pub-tag first-author" data-lang="en">First Author</span>
+            <span class="pub-tag first-author" data-lang="fr">Premier auteur</span>
+            <em>Energy Reports</em>, <strong>8</strong>, 4570&ndash;4588 (2022)
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title" data-lang="en">Skills</h2>
+      <h2 class="section-title" data-lang="fr">Comp&eacute;tences techniques</h2>
+      <div class="skills-grid fade-in">
+        <div class="skill-category">
+          <h3 data-lang="en">Programming &amp; Tools</h3>
+          <h3 data-lang="fr">Programmation &amp; Outils</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">SciPy</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">Xarray</span>
+            <span class="skill-tag">Fortran</span>
+            <span class="skill-tag">Bash</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">LabVIEW</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 data-lang="en">CFD, CAD &amp; Computing</h3>
+          <h3 data-lang="fr">CFD, CAO &amp; Calcul</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">ANSYS Fluent</span>
+            <span class="skill-tag">OpenFOAM</span>
+            <span class="skill-tag">HPC</span>
+            <span class="skill-tag">SLURM</span>
+            <span class="skill-tag">HTCondor</span>
+            <span class="skill-tag">CATIA</span>
+            <span class="skill-tag">SolidWorks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching -->
+  <section id="teaching">
+    <div class="container">
+      <h2 class="section-title" data-lang="en">Teaching</h2>
+      <h2 class="section-title" data-lang="fr">Enseignement</h2>
+      <div class="fade-in">
+        <div class="teaching-header">
+          <div class="teaching-badge">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <div>
+              <span data-lang="en" class="teaching-hours">~80 hours</span>
+              <span data-lang="fr" class="teaching-hours">~80 heures</span>
+              <span class="teaching-place">Universit&eacute; de Lille &middot; 2021&ndash;2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="teaching-cards" data-lang="en">
+          <div class="teaching-card">
+            <div class="teaching-card-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <div class="teaching-card-body">
+              <h4>Thermodynamics</h4>
+              <p>Practicals &amp; Tutorials</p>
+              <span class="teaching-level">L3 &mdash; 3rd year Bachelor</span>
+            </div>
+          </div>
+          <div class="teaching-card">
+            <div class="teaching-card-icon"><i class="fa-solid fa-calculator"></i></div>
+            <div class="teaching-card-body">
+              <h4>Numerical Methods</h4>
+              <p>Tutorials</p>
+              <span class="teaching-level">L2 &mdash; 2nd year Bachelor</span>
+            </div>
+          </div>
+          <div class="teaching-card">
+            <div class="teaching-card-icon"><i class="fa-solid fa-wind"></i></div>
+            <div class="teaching-card-body">
+              <h4>Turbulence</h4>
+              <p>Lectures</p>
+              <span class="teaching-level">M2 &mdash; 2nd year Master</span>
+            </div>
+          </div>
+        </div>
+        <div class="teaching-cards" data-lang="fr">
+          <div class="teaching-card">
+            <div class="teaching-card-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <div class="teaching-card-body">
+              <h4>Thermodynamique</h4>
+              <p>TP / TD</p>
+              <span class="teaching-level">L3 &mdash; Licence 3</span>
+            </div>
+          </div>
+          <div class="teaching-card">
+            <div class="teaching-card-icon"><i class="fa-solid fa-calculator"></i></div>
+            <div class="teaching-card-body">
+              <h4>M&eacute;thodes num&eacute;riques</h4>
+              <p>TD</p>
+              <span class="teaching-level">L2 &mdash; Licence 2</span>
+            </div>
+          </div>
+          <div class="teaching-card">
+            <div class="teaching-card-icon"><i class="fa-solid fa-wind"></i></div>
+            <div class="teaching-card-body">
+              <h4>Turbulence</h4>
+              <p>Cours</p>
+              <span class="teaching-level">M2 &mdash; Master 2</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div></div>
-    </div>
-    <footer class="footer">
-      <div class="container text-center"><a class="cc-linkedin btn btn-link" href="https://www.linkedin.com/in/michael-maalouly/"><i class="fa fa-linkedin fa-2x " aria-hidden="true"></i></a></div>
-      <div class="h4 title text-center">Michael Maalouly</div>
-      <div class="text-center text-muted">
-        <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid fade-in">
+        <div>
+          <ul class="contact-info-list">
+            <li><i class="fa-solid fa-location-dot"></i> <span>Lille, France</span></li>
+            <li><i class="fa-solid fa-phone"></i> <span>+33 7 72 34 39 93</span></li>
+            <li><i class="fa-solid fa-envelope"></i> <span>michael.maalouly@gmail.com</span></li>
+            <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/michael-maalouly/" target="_blank">linkedin.com/in/michael-maalouly</a></li>
+            <li><i class="fa-brands fa-orcid"></i> <a href="https://orcid.org/0000-0002-5953-909X" target="_blank">0000-0002-5953-909X</a></li>
+          </ul>
+        </div>
+        <form class="contact-form" action="https://formspree.io/michael.maalouly@gmail.com" method="POST">
+          <div class="form-group" data-lang="en"><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="form-group" data-lang="fr"><input type="text" name="name" placeholder="Votre nom" required></div>
+          <div class="form-group" data-lang="en"><input type="email" name="_replyto" placeholder="Your email" required></div>
+          <div class="form-group" data-lang="fr"><input type="email" name="_replyto" placeholder="Votre email" required></div>
+          <div class="form-group" data-lang="en"><input type="text" name="subject" placeholder="Subject" required></div>
+          <div class="form-group" data-lang="fr"><input type="text" name="subject" placeholder="Sujet" required></div>
+          <div class="form-group" data-lang="en"><textarea name="message" placeholder="Your message" required></textarea></div>
+          <div class="form-group" data-lang="fr"><textarea name="message" placeholder="Votre message" required></textarea></div>
+          <button type="submit" data-lang="en">Send Message</button>
+          <button type="submit" data-lang="fr">Envoyer</button>
+        </form>
       </div>
-    </footer>
-    <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
-    <script src="js/core/popper.min.js?ver=1.1.0"></script>
-    <script src="js/core/bootstrap.min.js?ver=1.1.0"></script>
-    <script src="js/now-ui-kit.js?ver=1.1.0"></script>
-    <script src="js/aos.js?ver=1.1.0"></script>
-    <script src="scripts/main.js?ver=1.1.0"></script>
-  </body>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/michael-maalouly/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/michaelmaalouly" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://orcid.org/0000-0002-5953-909X" target="_blank"><i class="fa-brands fa-orcid"></i></a>
+    </div>
+    <p>&copy; 2026 Michael Maalouly</p>
+  </footer>
+
+  <script>
+    // Language toggle
+    const toggle = document.getElementById('lang-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('fr');
+      const isFr = document.body.classList.contains('fr');
+      toggle.textContent = isFr ? 'EN' : 'FR';
+      document.documentElement.lang = isFr ? 'fr' : 'en';
+      document.title = isFr
+        ? 'Michael Maalouly — Ingénieur R&D | Docteur en Mécanique des Fluides'
+        : 'Michael Maalouly — R&D Engineer | PhD Fluid Mechanics';
+    });
+
+    // Navbar shadow on scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Close mobile menu on nav click
+    document.querySelectorAll('nav a[href^="#"]').forEach(a => {
+      a.addEventListener('click', () => document.querySelector('nav ul').classList.remove('open'));
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
 </html>
